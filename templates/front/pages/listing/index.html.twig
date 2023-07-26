@@ -1,0 +1,24 @@
+{% extends 'front/base.html.twig' %}
+
+{% block body %}
+
+	<div class="container">
+		<h2>{{listing.title}}<h2>
+				<div class="row justify-content-around">
+					<img class="h-50 w-50 rounded-1" src="{{listing.image}}">
+					<div class="col-4 my-auto d-inline-block">
+						<h3>{{listing.model.name}}
+							:
+							{{listing.model.brand.name}}</h3>
+						<p style="font-size: large">{{listing.description}}</p>
+					</div>
+				</div>
+				<h5>Année de production :
+					{{listing.producedYear}}</h5>
+				<h2>Prix :
+					{{listing.price|currency}}
+					€</h2>
+			</div>
+            
+
+		{% endblock %}

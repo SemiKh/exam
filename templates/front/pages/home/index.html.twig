@@ -1,0 +1,26 @@
+{% extends 'front/base.html.twig' %}
+
+
+{% block body %}
+    <h1>{{'home.title.listing'|trans}}</h1>
+
+	<div class="row justify-content-evenly">
+		{% for list in lastList %}
+			<div class="card col-4" >
+				<img class="card-img-top" src="{{list.image}}" alt="Card image cap">
+				<div class="card-body">
+					<h3 class="card-title">{{list.model.name}}</h3>
+					<h4>{{list.model.brand.name}}</h4>
+					<div class="justify-content-between">
+						<p>Année :
+							{{list.producedYear}}</p>
+						<p>Prix:
+							{{list.price|currency}}
+							€</p>
+					</div>
+					<a href="{{ path('app_listing_show', { 'id': list.id }) }}" class="btn btn-primary">Visiter l'annonce</a>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+{% endblock %}

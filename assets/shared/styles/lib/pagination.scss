@@ -3,12 +3,12 @@
   font-size: 1.1em;
 
   .current {
-    color: white;
+    color: rgb(68, 67, 67);
     border-radius: 3rem;
     text-decoration: none;
     padding: 0.3rem 1rem;
-    background-color: $orange;
-    box-shadow: lighten($orange, 20%) 0 0 0.2em;
+    background-color: #6a3ab6;
+    box-shadow: lighten(#a19696, 20%) 0 0 0.2em;
   }
 
   .page, .first, .last, .previous, .next {
@@ -19,11 +19,11 @@
       border-radius: 3rem;
       text-decoration: none;
       padding: 0.3rem 1rem;
-      background-color: $footer-background-color;
+      background-color: #bbbbbb;
 
       &:hover {
-        background-color:  $orange;
-        box-shadow: lighten($orange, 20%) 0 0 0.2em;
+        background-color:  #bbbbbb;
+        box-shadow: lighten(#bbbbbb, 20%) 0 0 0.2em;
       }
     }
   }
@@ -33,11 +33,11 @@
 .asc,
 .desc {
   text-decoration: none;
-  color: $main-color;
+  color: #bbbbbb;
 
   &:hover {
     text-decoration: none;
-    color: $orange;
+    color: #bbbbbb;
   }
 
   &:after {
