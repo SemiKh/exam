@@ -1,0 +1,66 @@
+
+.pagination {
+  font-size: 1.1em;
+
+  .current {
+    color: white;
+    border-radius: 3rem;
+    text-decoration: none;
+    padding: 0.3rem 1rem;
+    background-color: $orange;
+    box-shadow: lighten($orange, 20%) 0 0 0.2em;
+  }
+
+  .page, .first, .last, .previous, .next {
+    > a {
+      color: white;
+      margin-left: 0.2rem;
+      margin-right: 0.2rem;
+      border-radius: 3rem;
+      text-decoration: none;
+      padding: 0.3rem 1rem;
+      background-color: $footer-background-color;
+
+      &:hover {
+        background-color:  $orange;
+        box-shadow: lighten($orange, 20%) 0 0 0.2em;
+      }
+    }
+  }
+}
+
+.sortable,
+.asc,
+.desc {
+  text-decoration: none;
+  color: $main-color;
+
+  &:hover {
+    text-decoration: none;
+    color: $orange;
+  }
+
+  &:after {
+    content: '⬍';
+    padding-left: 0.4rem;
+    font-weight: 900;
+  }
+
+  &.asc {
+    &:after {
+      padding-left: 0.4rem;
+      content: '▴';
+      position: relative;
+      top: -5px;
+    }
+  }
+
+  &.desc {
+    &:after {
+      padding-left: 0.4rem;
+      content: '▾';
+      position: relative;
+      top: 5px;
+    }
+  }
+}
